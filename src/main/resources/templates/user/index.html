@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <link rel="stylesheet" th:href="@{/bootstrap/dist/css/bootstrap.min.css}">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" th:href="@{/admin_lte/font-awesome/css/font-awesome.min.css}">
+    <!-- Ionicons -->
+    <link rel="stylesheet" th:href="@{/admin_lte/Ionicons/css/ionicons.min.css}">
+    <!-- Theme style -->
+    <link rel="stylesheet" th:href="@{/admin_lte/css/AdminLTE.min.css}">
+    <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
+          page. However, you can choose any other skin. Make sure you
+          apply the skin class to the body tag so the changes take effect. -->
+    <link rel="stylesheet" th:href="@{/admin_lte/css/skins/_all-skins.css}">
+ </head>
+<body>
+<!--顶部导航栏部分-->
+<div th:include="@{/commons/title} :: title" />
+<!-- 中间主体内容部分 -->
+<div class="container">
+    <!-- 左侧导航栏 -->
+    <div th:replace="~{/commons/menu::menu(active='user')}" />
+    <!-- 子页面主要区域  -->
+    <div class="col-md-10">
+        <h3>子页面</h3>
+        <h4>用户管理 .....</h4>
+    </div>
+</div>
+<script th:src="@{/js/jquery/dist/jquery.min.js}"></script>
+<!-- Bootstrap 3.3.7 -->
+<script th:src="@{/bootstrap/dist/js/bootstrap.min.js}"></script>
+<!-- AdminLTE App -->
+<script th:src="@{/admin_lte/js/adminlte.js}"></script>
+</body>
+</html>
